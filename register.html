@@ -10,7 +10,7 @@
 
     <!-- Header / Menu -->
     <header>
-        <div class="logo">Gramin Development Center</div>
+        <div class="logo">GDC - Hasidul Islam</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -26,22 +26,27 @@
         <h2>Student Admission Form</h2>
         <p>Gramin Development Center training programs ke liye niche diye gaye form ko bharein.</p>
         
-        <form class="contact-form" style="text-align: left;">
+        <!-- Yeh form ab asli mein kaam karega aur aapke email par data bhejega -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" style="text-align: left;">
+            
+            <!-- Aapka Access Key (Yeh data aapke email par bhejne mein madad karega) -->
+            <input type="hidden" name="access_key" value="6fbf5dfd-cfb8-4c74-9842-8884bf99bc45">
+
             <label>Full Name (Pura Naam):</label>
-            <input type="text" placeholder="Enter your full name" required>
+            <input type="text" name="Student Name" placeholder="Enter your full name" required>
 
             <label>Mobile Number:</label>
-            <input type="tel" placeholder="Enter 10 digit mobile number" required>
+            <input type="tel" name="Mobile Number" placeholder="Enter 10 digit mobile number" required>
 
             <label>Select Course (Course Chunein):</label>
-            <select style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; margin-bottom: 15px;">
+            <select name="Selected Course" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; margin-bottom: 15px;">
                 <option>Digital Literacy (Computer Basic)</option>
                 <option>Skill Development Training</option>
                 <option>Smart Agriculture Techniques</option>
             </select>
 
             <label>Address (Pata):</label>
-            <textarea placeholder="Enter your full address" rows="4" required></textarea>
+            <textarea name="Address" placeholder="Enter your full address" rows="4" required></textarea>
 
             <button type="submit" class="btn" style="width: 100%;">Submit Application</button>
         </form>
